@@ -12,10 +12,7 @@
             ...mapActions([
                 'increment',
                 'decrement'
-            ]),
-            increment(by) {
-                this.$store.dispatch('increment', by);
-            }
+            ])
         }
     }
 </script>
