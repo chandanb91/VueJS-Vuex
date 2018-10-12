@@ -22,5 +22,31 @@ export const store = new Vuex.Store({
         decrement: state => {
             state.counter--;
         }
+    },
+    actions: {
+        // increment: context => {
+        //     context.commit('increment');
+        // },
+        // decrement: context => {
+        //     context.commit('decrement');
+        // },
+
+        // The above code can be simplified using es6 destructuring object assignment
+        increment: ({ commit }) => {
+            commit('increment');
+        },
+        decrement: ({ commit }) => {
+            commit('decrement');
+        },
+        asyncIncrement: ({ commit }) => {
+            setTimeout(() => {
+                commit('increment');
+            },1000)
+        },
+        asyncDecrement: ({ commit }) => {
+            setTimeout(() => {
+                commit('decrement');
+            },1000)
+        }
     }
 });
